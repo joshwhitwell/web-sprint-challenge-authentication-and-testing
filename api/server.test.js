@@ -3,8 +3,8 @@ const server = require('./server')
 
 describe('server.js module', () => {
     test('testing environment is correct', () => {
-        expect(process.env.DB_ENV).toBe('development')
-        expect(process.env.DB_ENV).not.toBe('testing')
+        expect(process.env.DB_ENV).toBe('testing')
+        expect(process.env.DB_ENV).not.toBe('development')
         expect(process.env.DB_ENV).not.toBe('production')
     })
 
