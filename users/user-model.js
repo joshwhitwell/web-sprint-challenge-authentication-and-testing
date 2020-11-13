@@ -4,6 +4,10 @@ function find() {
     return db('users')
 }
 
+function findBy(filter) {
+    return db('users').where(filter)
+}
+
 async function add(creds) {
     try {
         const [id] = await db('users').insert(creds)
@@ -14,6 +18,7 @@ async function add(creds) {
 }
 
 module.exports = {
-    find,
+    find, 
+    findBy,
     add
 }
